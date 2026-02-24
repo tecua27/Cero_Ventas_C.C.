@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ExpertCell - Dashboard Operativo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root { 
+            --sidebar-width: 280px; 
+            --primary-dark: #0f172a; 
+            --verde-pasto: #7CB342; 
+            --accent-green: #50E094; 
+            --danger-bold: #ef4444; 
+        }
+
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; }
+        
+        #login-screen {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--primary-dark); z-index: 9999;
+            display: flex; align-items: center; justify-content: center; color: white;
+        }
+
+        .sidebar { width: var(--sidebar-width); height: 100vh; position: fixed; background: var(--primary-dark); color: white; padding: 2rem 1.2rem; z-index: 100; }
+        .main-content { margin-left: var(--sidebar-width); padding: 2.5rem; }
+        
+        .kpi-card { border: none; border-radius: 12px; padding: 1.2rem; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .glass-card { background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        
+        .badge-alert { background: #fee2e2; color: #b91c1c; padding: 4px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: bold; border: 1px solid #f87171; }
+        .badge-ok { background: #f0fdf4; color: #166534; padding: 4px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: bold; border: 1px solid #bbf7d0; }
+        
+        .scrollable { max-height: 500px; overflow-y: auto; }
+        
+        .btn-primary { background-color: var(--accent-green); border-color: var(--accent-green); color: #0f172a; font-weight: bold; }
+        .table thead { background-color: #f8fafc; position: sticky; top: 0; z-index: 10; }
+    </style>
+</head>
+<body>
+
+<div id="login-screen">
+    <div class="text-center" style="max-width: 350px; width: 90%;">
+        <h2 class="fw-bold mb-4" style="color: var(--accent-green);">EXPERTCELL</h2>
+        <p>Ingresa tu contraseña</p>
+        <input type="password" id="passInput" class="form-control form-control-lg bg-dark text-white border-secondary mb-3" placeholder="Contraseña">
+        <button class="btn btn-primary btn-lg w-100" onclick="validateAccess()">Entrar al Sistema</button>
+        <div id="loginError" class="text-danger mt-3 small" style="display:none">Contraseña incorrecta.</div>
+    </div>
+</div>
+
+<div id="dashboard-view" style="display:none">
+    <div class="sidebar">
+        <div class="text-center mb-5">
+            <h5 class="fw-bold text-white">EXPERTCELL</h5>
+            <div class="badge bg-success small mb-2">Administración de Ventas</div>
+        </div>
+        
+        <label>TIENDA</label><br>
+        <select id="selTienda" class="form-select bg-dark text-white border-0 mb-4 shadow-none" onchange="renderizar()"></select>
+
+        <div class="mt-4 p-3" style="background: rgba(255,255,255,0.05); border-radius: 10px; border-left: 4px solid var(--accent-green);">
+            <div class="fw-bold" style="color: var(--accent-green);">Avance al: 22 / 02 / 2026</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="row g-3 mb-4">
+            <div class="col-md-4"><div class="kpi-card border-start border-primary border-4"><div class="text-muted small">PLANTILLA TOTAL</div><div class="h3 fw-bold" id="kpiTotal">0</div></div></div>
+            <div class="col-md-4"><div class="kpi-card border-start border-danger border-4"><div class="text-danger small">VENTAS CRÍTICAS (< 4)</div><div class="h3 fw-bold text-danger" id="kpiCriticos">0</div></div></div>
+            <div class="col-md-4"><div class="kpi-card border-start border-success border-4"><div class="text-success small">VENTAS ÓPTIMAS (4+)</div><div class="h3 fw-bold text-success" id="kpiMeta">0</div></div></div>
+        </div>
+
+        <div class="glass-card">
+            <h6 class="fw-bold mb-4">Detalle de Productividad por Ejecutivo</h6>
+            <div class="scrollable">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>EJECUTIVO</th>
+                            <th>JEFE INMEDIATO</th>
+                            <th>TIENDA</th>
+                            <th>INGRESO</th>
+                            <th class="text-center">VENTAS</th>
+                            <th class="text-center">ESTADO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaGeneral"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <canvas id="mainChart" height="350"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+    const PASS_VALIDA = "pilar.ga"; 
+    let rawData = [];
+    let myChart = null;
+
+    async function validateAccess() {
+        const pass = document.getElementById('passInput').value;
+        if (pass === PASS_VALIDA || pass === "julian") {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('dashboard-view').style.display = 'block';
+            fetchData();
+        } else {
+            document.getElementById('loginError').style.display = 'block';
+        }
+    }
+
+    async function fetchData() {
+        try {
+            const response = await fetch('datos.json');
+            rawData = await response.json();
+            
+            // Llenar selector de tiendas
+            const tiendas = ['TODAS', ...new Set(rawData.map(d => d.tienda))];
+            document.getElementById('selTienda').innerHTML = tiendas.map(t => `<option value="${t}">${t}</option>`).join('');
+            
+            renderizar();
+        } catch (error) { 
+            console.error("Error al cargar datos.json", error); 
+        }
+    }
+
+    function renderizar() {
+        const t = document.getElementById('selTienda').value;
+        const filteredData = rawData.filter(d => (t === 'TODAS' || d.tienda === t));
+        
+        // Ordenar: Primero los de menos ventas
+        filteredData.sort((a, b) => a.ventas - b.ventas);
+
+        // Actualizar Contadores
+        const criticos = filteredData.filter(d => d.ventas < 4);
+        document.getElementById('kpiTotal').innerText = filteredData.length;
+        document.getElementById('kpiCriticos').innerText = criticos.length;
+        document.getElementById('kpiMeta').innerText = filteredData.length - criticos.length;
+
+        // Generar filas de la tabla
+        document.getElementById('listaGeneral').innerHTML = filteredData.map(d => `
+            <tr>
+                <td><strong>${d.nombre}</strong></td>
+                <td><span class="text-secondary">${d.jefe || 'N/A'}</span></td>
+                <td><span class="badge bg-light text-dark border">${d.tienda}</span></td>
+                <td class="small">${d.ingreso || 'N/A'}</td>
+                <td class="text-center fw-bold ${d.ventas < 4 ? 'text-danger' : 'text-success'}" style="font-size: 1.1rem;">
+                    ${d.ventas}
+                </td>
+                <td class="text-center">
+                    ${d.ventas < 4 ? '<span class="badge-alert">BAJO LOGRO</span>' : '<span class="badge-ok">CUMPLIENDO</span>'}
+                </td>
+            </tr>
+        `).join('');
+
+        // Actualizar Gráfico de Barras
+        const ctx = document.getElementById('mainChart').getContext('2d');
+        if (myChart) myChart.destroy();
+        myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: filteredData.map(d => d.nombre),
+                datasets: [{
+                    label: 'Ventas Realizadas',
+                    data: filteredData.map(d => d.ventas),
+                    backgroundColor: filteredData.map(d => d.ventas < 4 ? '#ef4444' : '#50E094'),
+                    borderRadius: 6
+                }]
+            },
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { 
+                    y: { beginAtZero: true, grid: { color: '#f1f5f9' } },
+                    x: { ticks: { font: { size: 10 } }, grid: { display: false } }
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>
