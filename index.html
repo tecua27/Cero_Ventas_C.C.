@@ -97,13 +97,25 @@
 </div>
 
 <script>
-    const PASS_VALIDA = "pilar.ga"; 
+    // --- CONFIGURACIÓN DE ACCESOS ---
+    const ACCESS_MAP = {
+        "pilar.ga": ["TODAS"],      // Ve ambas tiendas
+        "guillo.ca":["TODAS"],
+        "gerente.t1": ["TIENDA A"], // Solo ve Tienda A (ajustar nombre exacto)
+        "gerente.t2": ["TIENDA B"], // Solo ve Tienda B (ajustar nombre exacto)
+        "admin.especial": ["TIENDA A", "TIENDA B"] // Ejemplo multi-tienda específica
+    };
+    // --------------------------------
+
     let rawData = [];
     let myChart = null;
+    let tiendasPermitidas = [];
 
     async function validateAccess() {
         const pass = document.getElementById('passInput').value;
-        if (pass === PASS_VALIDA || pass === "julian") {
+        
+        if (ACCESS_MAP[pass]) {
+            tiendasPermitidas = ACCESS_MAP[pass];
             document.getElementById('login-screen').style.display = 'none';
             document.getElementById('dashboard-view').style.display = 'block';
             fetchData();
@@ -115,11 +127,25 @@
     async function fetchData() {
         try {
             const response = await fetch('datos.json');
-            rawData = await response.json();
+            const allData = await response.json();
             
-            // Llenar selector de tiendas
-            const tiendas = ['TODAS', ...new Set(rawData.map(d => d.tienda))];
-            document.getElementById('selTienda').innerHTML = tiendas.map(t => `<option value="${t}">${t}</option>`).join('');
+            // Filtrar datos originales según el permiso de la contraseña
+            if (tiendasPermitidas.includes("TODAS")) {
+                rawData = allData;
+            } else {
+                rawData = allData.filter(d => tiendasPermitidas.includes(d.tienda));
+            }
+            
+            // Llenar selector de tiendas basado solo en lo que el usuario puede ver
+            const listaTiendasDisponibles = [...new Set(rawData.map(d => d.tienda))];
+            
+            let selectorHTML = "";
+            if (tiendasPermitidas.includes("TODAS") || listaTiendasDisponibles.length > 1) {
+                selectorHTML += `<option value="TODAS">TODAS</option>`;
+            }
+            
+            selectorHTML += listaTiendasDisponibles.map(t => `<option value="${t}">${t}</option>`).join('');
+            document.getElementById('selTienda').innerHTML = selectorHTML;
             
             renderizar();
         } catch (error) { 
@@ -140,7 +166,7 @@
         document.getElementById('kpiCriticos').innerText = criticos.length;
         document.getElementById('kpiMeta').innerText = filteredData.length - criticos.length;
 
-        // Generar filas de la tabla
+        // Generar filas de la tabla (Estructura Intacta)
         document.getElementById('listaGeneral').innerHTML = filteredData.map(d => `
             <tr>
                 <td><strong>${d.nombre}</strong></td>
@@ -156,7 +182,7 @@
             </tr>
         `).join('');
 
-        // Actualizar Gráfico de Barras
+        // Actualizar Gráfico (Estructura Intacta)
         const ctx = document.getElementById('mainChart').getContext('2d');
         if (myChart) myChart.destroy();
         myChart = new Chart(ctx, {
@@ -183,4 +209,4 @@
     }
 </script>
 </body>
-</html>
+</html> 
