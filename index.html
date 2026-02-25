@@ -57,7 +57,10 @@
         </div>
         
         <label>TIENDA</label><br>
-        <select id="selTienda" class="form-select bg-dark text-white border-0 mb-4 shadow-none" onchange="renderizar()"></select>
+        <select id="selTienda" class="form-select bg-dark text-white border-0 mb-3 shadow-none" onchange="actualizarJefes()"></select>
+
+        <label">SUPERVISOR</label>
+        <select id="selJefe" class="form-select bg-dark text-white border-0 mb-4 shadow-none" onchange="renderizar()"></select>
 
         <div class="mt-4 p-3" style="background: rgba(255,255,255,0.05); border-radius: 10px; border-left: 4px solid var(--accent-green);">
             <div class="fw-bold" style="color: var(--accent-green);">Avance al: 22 / 02 / 2026</div>
@@ -79,7 +82,7 @@
                         <tr>
                             <th>EJECUTIVO</th>
                             <th>JEFE INMEDIATO</th>
-                            <th>TIENDA</th>
+                            <th id="thTienda">TIENDA</th>
                             <th>INGRESO</th>
                             <th class="text-center">VENTAS</th>
                             <th class="text-center">ESTADO</th>
@@ -97,15 +100,14 @@
 </div>
 
 <script>
-    // --- CONFIGURACIÓN DE ACCESOS ---
     const ACCESS_MAP = {
-        "pilar.ga": ["TODAS"],      // Ve ambas tiendas
-        "guillo.ca":["TODAS"],
-        "gerente.t1": ["TIENDA A"], // Solo ve Tienda A (ajustar nombre exacto)
-        "gerente.t2": ["TIENDA B"], // Solo ve Tienda B (ajustar nombre exacto)
-        "admin.especial": ["TIENDA A", "TIENDA B"] // Ejemplo multi-tienda específica
+        "pilar.ga": ["TODAS"],
+        "guillo.ca": ["TODAS"],
+        "yara": ["TODAS"],
+        "gerente.t1": ["TIENDA A"],
+        "gerente.t2": ["TIENDA B"],
+        "admin.especial": ["TIENDA A", "TIENDA B"]
     };
-    // --------------------------------
 
     let rawData = [];
     let myChart = null;
@@ -113,7 +115,6 @@
 
     async function validateAccess() {
         const pass = document.getElementById('passInput').value;
-        
         if (ACCESS_MAP[pass]) {
             tiendasPermitidas = ACCESS_MAP[pass];
             document.getElementById('login-screen').style.display = 'none';
@@ -129,49 +130,64 @@
             const response = await fetch('datos.json');
             const allData = await response.json();
             
-            // Filtrar datos originales según el permiso de la contraseña
             if (tiendasPermitidas.includes("TODAS")) {
                 rawData = allData;
             } else {
                 rawData = allData.filter(d => tiendasPermitidas.includes(d.tienda));
             }
             
-            // Llenar selector de tiendas basado solo en lo que el usuario puede ver
             const listaTiendasDisponibles = [...new Set(rawData.map(d => d.tienda))];
-            
-            let selectorHTML = "";
-            if (tiendasPermitidas.includes("TODAS") || listaTiendasDisponibles.length > 1) {
-                selectorHTML += `<option value="TODAS">TODAS</option>`;
-            }
-            
+            let selectorHTML = (tiendasPermitidas.includes("TODAS") || listaTiendasDisponibles.length > 1) ? '<option value="TODAS">TODAS</option>' : '';
             selectorHTML += listaTiendasDisponibles.map(t => `<option value="${t}">${t}</option>`).join('');
             document.getElementById('selTienda').innerHTML = selectorHTML;
             
-            renderizar();
+            actualizarJefes();
         } catch (error) { 
             console.error("Error al cargar datos.json", error); 
         }
     }
 
+    function actualizarJefes() {
+        const tiendaSeleccionada = document.getElementById('selTienda').value;
+        const dataFiltradaPorTienda = (tiendaSeleccionada === 'TODAS') ? rawData : rawData.filter(d => d.tienda === tiendaSeleccionada);
+        
+        const jefes = ['TODOS', ...new Set(dataFiltradaPorTienda.map(d => d.jefe).filter(j => j))];
+        document.getElementById('selJefe').innerHTML = jefes.map(j => `<option value="${j}">${j}</option>`).join('');
+        
+        renderizar();
+    }
+
     function renderizar() {
         const t = document.getElementById('selTienda').value;
-        const filteredData = rawData.filter(d => (t === 'TODAS' || d.tienda === t));
+        const j = document.getElementById('selJefe').value;
         
-        // Ordenar: Primero los de menos ventas
+        const filteredData = rawData.filter(d => 
+            (t === 'TODAS' || d.tienda === t) && 
+            (j === 'TODOS' || d.jefe === j)
+        );
+        
         filteredData.sort((a, b) => a.ventas - b.ventas);
 
-        // Actualizar Contadores
+        // Control de visibilidad de la columna Tienda
+        const thTienda = document.getElementById('thTienda');
+        if (t !== 'TODAS') {
+            thTienda.style.display = 'none';
+        } else {
+            thTienda.style.display = '';
+        }
+
         const criticos = filteredData.filter(d => d.ventas < 4);
         document.getElementById('kpiTotal').innerText = filteredData.length;
         document.getElementById('kpiCriticos').innerText = criticos.length;
         document.getElementById('kpiMeta').innerText = filteredData.length - criticos.length;
 
-        // Generar filas de la tabla (Estructura Intacta)
         document.getElementById('listaGeneral').innerHTML = filteredData.map(d => `
             <tr>
                 <td><strong>${d.nombre}</strong></td>
                 <td><span class="text-secondary">${d.jefe || 'N/A'}</span></td>
-                <td><span class="badge bg-light text-dark border">${d.tienda}</span></td>
+                <td style="${t !== 'TODAS' ? 'display:none' : ''}">
+                    <span class="badge bg-light text-dark border">${d.tienda}</span>
+                </td>
                 <td class="small">${d.ingreso || 'N/A'}</td>
                 <td class="text-center fw-bold ${d.ventas < 4 ? 'text-danger' : 'text-success'}" style="font-size: 1.1rem;">
                     ${d.ventas}
@@ -182,7 +198,6 @@
             </tr>
         `).join('');
 
-        // Actualizar Gráfico (Estructura Intacta)
         const ctx = document.getElementById('mainChart').getContext('2d');
         if (myChart) myChart.destroy();
         myChart = new Chart(ctx, {
@@ -209,4 +224,4 @@
     }
 </script>
 </body>
-</html> 
+</html>
