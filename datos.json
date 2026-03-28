@@ -1,21 +1,7 @@
 [
   {
-    "nombre": "FRIDA RODRIGUEZ GARCIA",
-    "jefe": "SIN JEFE",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "16/3/2026",
-    "ventas": 0
-  },
-  {
-    "nombre": "MARIO RAFAEL AMENGUAL RIVERO",
-    "jefe": "SIN JEFE",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "16/3/2026",
-    "ventas": 0
-  },
-  {
     "nombre": "OMAR CAMPOS JIMENEZ",
-    "jefe": "SIN JEFE",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "22/3/2026",
     "ventas": 0
@@ -25,7 +11,7 @@
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "3/8/2025",
-    "ventas": 8
+    "ventas": 10
   },
   {
     "nombre": "ANDRES TELLEZ CRUZ",
@@ -39,21 +25,21 @@
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "2/11/2025",
-    "ventas": 4
+    "ventas": 7
   },
   {
     "nombre": "CRISTIAN AMOROS CANO",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "22/6/2025",
-    "ventas": 6
+    "ventas": 7
   },
   {
     "nombre": "DYLAN URIEL DOMINGUEZ FLORENCIA",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "14/9/2025",
-    "ventas": 3
+    "ventas": 5
   },
   {
     "nombre": "EDUARDO MELENDEZ GARCIA",
@@ -74,21 +60,21 @@
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "6/7/2025",
-    "ventas": 5
+    "ventas": 9
   },
   {
     "nombre": "JAIR DALI MALDONADO AGUIRRE",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "25/1/2026",
-    "ventas": 7
+    "ventas": 8
   },
   {
     "nombre": "JESUS OZAIR RUIZ ORTIGOZA",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "18/1/2026",
-    "ventas": 5
+    "ventas": 6
   },
   {
     "nombre": "JOSUE BRAVO NIEVES",
@@ -109,28 +95,28 @@
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "5/10/2025",
-    "ventas": 5
+    "ventas": 10
   },
   {
     "nombre": "RICARDO FUENTES TERAN",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "7/9/2025",
-    "ventas": 9
+    "ventas": 12
   },
   {
     "nombre": "SALIM BERENICE ROMERO TOSCOYOA",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "18/1/2026",
-    "ventas": 6
+    "ventas": 7
   },
   {
     "nombre": "VIDAL ZAP BERNABE",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "17/11/2025",
-    "ventas": 17
+    "ventas": 18
   },
   {
     "nombre": "ALAN OMAR CONTRERAS PATIÑO",
@@ -172,14 +158,14 @@
     "jefe": "ALFREDO CABRERA PADRON",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "20/7/2025",
-    "ventas": 3
+    "ventas": 5
   },
   {
     "nombre": "JAMILET GUZMAN REYES",
     "jefe": "ALFREDO CABRERA PADRON",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "29/6/2025",
-    "ventas": 12
+    "ventas": 15
   },
   {
     "nombre": "JESSICA HERNANDEZ GRIJALVA",
@@ -193,7 +179,7 @@
     "jefe": "ALFREDO CABRERA PADRON",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "17/11/2025",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "JONATHAN RUGERIO CUEVAS",
@@ -207,14 +193,14 @@
     "jefe": "ALFREDO CABRERA PADRON",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "5/10/2025",
-    "ventas": 11
+    "ventas": 14
   },
   {
     "nombre": "MARIA FERNANDA OROPEZA DE LUNA",
     "jefe": "ALFREDO CABRERA PADRON",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "11/1/2026",
-    "ventas": 4
+    "ventas": 5
   },
   {
     "nombre": "VICTOR DANIEL RODRIGUEZ RAMIREZ",
@@ -249,63 +235,63 @@
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "13/7/2025",
-    "ventas": 4
+    "ventas": 5
   },
   {
     "nombre": "ALONDRA GONZALEZ LUCAS",
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "28/9/2025",
-    "ventas": 7
+    "ventas": 9
   },
   {
     "nombre": "CHRISTIAN GARCIA ALVARADO",
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "17/11/2025",
-    "ventas": 8
+    "ventas": 13
   },
   {
     "nombre": "DIANA LAURA FLORES ARROYO",
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "7/9/2025",
-    "ventas": 11
+    "ventas": 14
   },
   {
     "nombre": "DIEGO IVAN RODRIGUEZ ALVAREZ",
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "20/7/2025",
-    "ventas": 5
+    "ventas": 10
   },
   {
     "nombre": "FELIPE EMMANUEL SANTOS LOPEZ",
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "26/10/2025",
-    "ventas": 5
+    "ventas": 7
   },
   {
     "nombre": "FORTINO ROMERO PEREZ",
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "17/11/2025",
-    "ventas": 8
+    "ventas": 11
   },
   {
     "nombre": "KATHIA ESTEFANIA PEREZ MERCADO",
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "25/1/2026",
-    "ventas": 6
+    "ventas": 10
   },
   {
     "nombre": "KENIA ELIZABETH DE LA FUENTE VAZQUEZ",
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "18/1/2026",
-    "ventas": 7
+    "ventas": 10
   },
   {
     "nombre": "MARIA TERESA IVONNE AGUILAR DOMINGUEZ",
@@ -319,21 +305,21 @@
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "10/8/2025",
-    "ventas": 8
+    "ventas": 9
   },
   {
     "nombre": "PAOLA DANAE TEYSSIER HERNANDEZ",
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "18/1/2026",
-    "ventas": 3
+    "ventas": 4
   },
   {
     "nombre": "YARUMI ALBINO AGUILAR",
     "jefe": "CARLOS ALBERTO AGUILAR CANO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "18/1/2026",
-    "ventas": 4
+    "ventas": 5
   },
   {
     "nombre": "ZULLY AIDE CRUZ RAMIREZ",
@@ -354,14 +340,14 @@
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "18/1/2026",
-    "ventas": 9
+    "ventas": 11
   },
   {
     "nombre": "CESAR JAHACIEL ALONSO GARCIA",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "1/7/2025",
-    "ventas": 8
+    "ventas": 11
   },
   {
     "nombre": "ERIKA DEL SOCORRO FLORES FRANCO",
@@ -375,56 +361,56 @@
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "24/8/2025",
-    "ventas": 5
+    "ventas": 10
   },
   {
     "nombre": "GAMALIEL ALEJANDRO ZAMORA VALENCIA",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "23/11/2025",
-    "ventas": 9
+    "ventas": 14
   },
   {
     "nombre": "GLADYS LIZBETH CRUZ MEDRANO",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "3/8/2025",
-    "ventas": 8
+    "ventas": 12
   },
   {
     "nombre": "IRVING RIVERA CASTILLO",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "30/11/2025",
-    "ventas": 4
+    "ventas": 6
   },
   {
     "nombre": "JAVIER FERNANDO HERNANDEZ PEREZ",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "8/2/2026",
-    "ventas": 7
+    "ventas": 8
   },
   {
     "nombre": "JAVIER ISSAC SERNA GUZMAN",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "4/1/2026",
-    "ventas": 10
+    "ventas": 13
   },
   {
     "nombre": "JOSE ADRIAN SANCHEZ ESTEVEZ",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "11/1/2026",
-    "ventas": 7
+    "ventas": 11
   },
   {
     "nombre": "KEVIN ALEJANDRO PEREZ COBOS",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "7/9/2025",
-    "ventas": 4
+    "ventas": 7
   },
   {
     "nombre": "NAIVY KARYME BELLO GASCA",
@@ -438,7 +424,7 @@
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "17/8/2025",
-    "ventas": 11
+    "ventas": 13
   },
   {
     "nombre": "XIMENA JUAREZ VILLARAUZ",
@@ -448,24 +434,10 @@
     "ventas": 6
   },
   {
-    "nombre": "ALEX ROBERTO ARENAS ESTRADA",
-    "jefe": "SIN JEFE",
-    "tienda": "EXP ATT C CENTER JUAREZ 701",
+    "nombre": "FRIDA RODRIGUEZ GARCIA",
+    "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
+    "tienda": "EXP ATT C CENTER 2",
     "ingreso": "16/3/2026",
-    "ventas": 0
-  },
-  {
-    "nombre": "MARIA FERNANDA RIVERA LOPEZ",
-    "jefe": "SIN JEFE",
-    "tienda": "EXP ATT C CENTER JUAREZ 701",
-    "ingreso": "16/3/2026",
-    "ventas": 0
-  },
-  {
-    "nombre": "ERIC DE JESUS MORENO",
-    "jefe": "JORGE MIGUEL UREÑA ZARATE",
-    "tienda": "EXP ATT C CENTER JUAREZ 701",
-    "ingreso": "25/1/2026",
     "ventas": 0
   },
   {
@@ -473,28 +445,28 @@
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "22/2/2026",
-    "ventas": 5
+    "ventas": 8
   },
   {
     "nombre": "HERMES DE JESUS LEYVA GARCIA",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "27/7/2025",
-    "ventas": 10
+    "ventas": 12
   },
   {
     "nombre": "IRVIN ALEXIS FERNANDEZ MILA",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/8/2024",
-    "ventas": 15
+    "ventas": 17
   },
   {
     "nombre": "JENNY PEREZ TOME",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "6/8/2024",
-    "ventas": 10
+    "ventas": 12
   },
   {
     "nombre": "JOSHUA LOPEZ MUNGUIA",
@@ -508,42 +480,42 @@
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "30/11/2025",
-    "ventas": 11
+    "ventas": 14
   },
   {
     "nombre": "KARLA KARINA JIMENEZ SERRANO",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "17/8/2025",
-    "ventas": 19
+    "ventas": 20
   },
   {
     "nombre": "MARIA FERNANDA HURTADO RODRIGUEZ",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "10/8/2025",
-    "ventas": 10
+    "ventas": 12
   },
   {
     "nombre": "SAMARA DEZERET GONZALEZ GOMEZ",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "22/6/2025",
-    "ventas": 10
+    "ventas": 12
   },
   {
     "nombre": "SAUL DIONISIO RAMOS",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/9/2025",
-    "ventas": 7
+    "ventas": 10
   },
   {
     "nombre": "VERONICA RODRIGUEZ HERMANDEZ",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "11/1/2026",
-    "ventas": 13
+    "ventas": 15
   },
   {
     "nombre": "YONATAN ARMAS ROLDAN",
@@ -574,101 +546,115 @@
     "ventas": 1
   },
   {
+    "nombre": "ALEX ROBERTO ARENAS ESTRADA",
+    "jefe": "SIN ASIGNAR",
+    "tienda": "EXP ATT C CENTER JUAREZ 701",
+    "ingreso": "16/3/2026",
+    "ventas": 0
+  },
+  {
     "nombre": "ANGEL AARON GARCIA CANO PATIÑO",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/9/2025",
-    "ventas": 4
+    "ventas": 5
   },
   {
     "nombre": "CRISTEL TAPIA RODRIGUEZ",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "24/8/2025",
     "ventas": 7
   },
   {
     "nombre": "GUADALUPE ESTEVEZ ESTEVEZ",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/8/2024",
-    "ventas": 4
+    "ventas": 8
   },
   {
     "nombre": "GUILLERMO JOSUE GUARNEROS LEZAMA",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "2/11/2025",
-    "ventas": 11
+    "ventas": 12
   },
   {
     "nombre": "JORGE ALBERTO GARCIA BANUET",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "30/11/2025",
-    "ventas": 6
+    "ventas": 7
   },
   {
     "nombre": "JORGE QUEZADA ALVAREZ",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "17/8/2025",
     "ventas": 9
   },
   {
     "nombre": "MARIA DEL CORAL FLORES LOPEZ",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "26/11/2024",
     "ventas": 5
   },
   {
-    "nombre": "MARIA FERNANDA VARGAS REYES",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "nombre": "MARIA FERNANDA RIVERA LOPEZ",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
-    "ingreso": "12/1/2025",
-    "ventas": 11
-  },
-  {
-    "nombre": "MARIA GUADALUPE ROSAS GODOS",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
-    "tienda": "EXP ATT C CENTER JUAREZ 701",
-    "ingreso": "24/3/2025",
+    "ingreso": "16/3/2026",
     "ventas": 0
   },
   {
+    "nombre": "MARIA FERNANDA VARGAS REYES",
+    "jefe": "SIN ASIGNAR",
+    "tienda": "EXP ATT C CENTER JUAREZ 701",
+    "ingreso": "12/1/2025",
+    "ventas": 12
+  },
+  {
+    "nombre": "MARIA GUADALUPE ROSAS GODOS",
+    "jefe": "SIN ASIGNAR",
+    "tienda": "EXP ATT C CENTER JUAREZ 701",
+    "ingreso": "24/3/2025",
+    "ventas": 4
+  },
+  {
     "nombre": "MARIO ALEJANDRO CORTES MENDEZ",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "18/1/2026",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "NORWIN LOT ROJAS GARCIA",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "22/2/2026",
     "ventas": 3
   },
   {
     "nombre": "OMAR LUIS SANTIAGO",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "25/1/2026",
-    "ventas": 4
+    "ventas": 6
   },
   {
     "nombre": "URIEL GIOVANNI LOPEZ ROJAS",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "15/2/2026",
-    "ventas": 3
+    "ventas": 4
   },
   {
     "nombre": "VICTOR EDUARDO CAMACHO VARGAS",
-    "jefe": "MARIA FERNANDA MARTINEZ BISTRAIN",
+    "jefe": "SIN ASIGNAR",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "5/5/2025",
-    "ventas": 10
+    "ventas": 13
   }
 ]
