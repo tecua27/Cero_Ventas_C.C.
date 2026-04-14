@@ -35,6 +35,21 @@
         
         .btn-primary { background-color: var(--accent-green); border-color: var(--accent-green); color: #0f172a; font-weight: bold; }
         .table thead { background-color: #f8fafc; position: sticky; top: 0; z-index: 10; }
+
+        /* Nuevos estilos para mayor legibilidad */
+        .table-datatable th { font-size: 0.85rem; text-transform: uppercase; color: #64748b; padding-bottom: 1rem; }
+        
+        /* Tamaños base para la tabla */
+        .td-nombre { font-size: 1.2rem; line-height: 1.2; }
+        .td-info { font-size: 1rem; color: #475569; }
+        .td-ventas { font-size: 2rem !important; font-weight: 800; }
+        
+        /* Ajuste de badges para que no se vean pequeños */
+        .td-info .badge { font-size: 0.75rem; padding: 5px 10px; }
+        .badge-alert, .badge-ok { font-size: 0.85rem; padding: 6px 12px; }
+
+        /* Aumentar el padding de las filas para dar aire */
+        .table-hover tbody tr td { padding-top: 1.5rem; padding-bottom: 1.5rem; }
     </style>
 </head>
 <body>
@@ -101,6 +116,7 @@
 
 <script>
     const ACCESS_MAP = {
+        "j.tenorio":["TODAS"],
         "blanca":["TODAS"],
         "julio1":["TODAS"],
         "guillo.ca": ["TODAS"],
@@ -162,43 +178,86 @@
         const t = document.getElementById('selTienda').value;
         const j = document.getElementById('selJefe').value;
         
+        // Fecha de corte solicitada (1 de Abril 2026)
+        const FECHA_CORTE = new Date(2026, 3, 1); 
+
         const filteredData = rawData.filter(d => 
             (t === 'TODAS' || d.tienda === t) && 
             (j === 'TODOS' || d.jefe === j)
         );
-        
-        filteredData.sort((a, b) => a.ventas - b.ventas);
 
-        // Control de visibilidad de la columna Tienda
+        // Variables para los contadores superiores
+        let totalPlantilla = filteredData.length;
+        let ventasCriticas = 0;
+        let ventasOptimas = 0; // Este contará a los de 8+
+
+        filteredData.sort((a, b) => b.ventas - a.ventas);
+
+        // --- CONTROL DE VISIBILIDAD DE COLUMNAS (ENCABEZADOS) ---
         const thTienda = document.getElementById('thTienda');
-        if (t !== 'TODAS') {
-            thTienda.style.display = 'none';
-        } else {
-            thTienda.style.display = '';
-        }
+        const thJefe = document.querySelector('th:nth-child(2)'); // JEFE INMEDIATO
 
-        const criticos = filteredData.filter(d => d.ventas < 4);
-        document.getElementById('kpiTotal').innerText = filteredData.length;
-        document.getElementById('kpiCriticos').innerText = criticos.length;
-        document.getElementById('kpiMeta').innerText = filteredData.length - criticos.length;
+        thTienda.style.display = (t !== 'TODAS') ? 'none' : '';
+        if (thJefe) thJefe.style.display = (j !== 'TODOS') ? 'none' : '';
 
-        document.getElementById('listaGeneral').innerHTML = filteredData.map(d => `
-            <tr>
-                <td><strong>${d.nombre}</strong></td>
-                <td><span class="text-secondary">${d.jefe || 'N/A'}</span></td>
-                <td style="${t !== 'TODAS' ? 'display:none' : ''}">
-                    <span class="badge bg-light text-dark border">${d.tienda}</span>
-                </td>
-                <td class="small">${d.ingreso || 'N/A'}</td>
-                <td class="text-center fw-bold ${d.ventas < 4 ? 'text-danger' : 'text-success'}" style="font-size: 1.1rem;">
-                    ${d.ventas}
-                </td>
-                <td class="text-center">
-                    ${d.ventas < 4 ? '<span class="badge-alert">BAJO LOGRO</span>' : '<span class="badge-ok">CUMPLIENDO</span>'}
-                </td>
-            </tr>
-        `).join('');
+        // Generar filas de la tabla con diseño expandido
+        document.getElementById('listaGeneral').innerHTML = filteredData.map(d => {
+            // Procesar fecha DD/MM/YYYY del JSON
+            const partes = d.ingreso.split('/');
+            const fechaIngreso = new Date(partes[2], partes[1] - 1, partes[0]);
+            
+            const diffTiempo = FECHA_CORTE - fechaIngreso;
+            const diasAntiguedad = Math.floor(diffTiempo / (1000 * 60 * 60 * 24));
+            
+            const esAntiguo = diasAntiguedad > 42;
+            const logroCuota = d.ventas >= 8;
 
+            // Lógica de conteo para KPIs superiores
+            if (d.ventas < 4) {
+                ventasCriticas++;
+            } else if (d.ventas >= 8) {
+                ventasOptimas++;
+            }
+
+            return `
+                <tr>
+                    <td class="td-nombre">
+                        <div class="fw-bold text-dark">${d.nombre}</div>
+                        <div class="text-muted" style="font-size: 0.9rem;">${diasAntiguedad} días de antigüedad</div>
+                    </td>
+                    
+                    <td class="td-info" style="${j !== 'TODOS' ? 'display:none' : ''}">
+                        <span class="text-secondary">${d.jefe || 'N/A'}</span>
+                    </td>
+                    
+                    <td class="td-info" style="${t !== 'TODAS' ? 'display:none' : ''}">
+                        <span class="badge bg-light text-dark border">${d.tienda}</span>
+                    </td>
+                    
+                    <td class="td-info">
+                        <div class="fw-bold">${d.ingreso}</div>
+                        ${esAntiguo ? '<span class="badge bg-info text-dark mt-1">+42 DÍAS</span>' : '<span class="badge bg-light text-muted mt-1">RECIENTE</span>'}
+                    </td>
+                    
+                    <td class="text-center">
+                        <div class="td-ventas ${d.ventas < 4 ? 'text-danger' : (logroCuota ? 'text-success' : 'text-primary')}">
+                            ${d.ventas}
+                        </div>
+                    </td>
+                    
+                    <td class="text-center">
+                        ${d.ventas < 4 ? '<span class="badge-alert">BAJO LOGRO</span>' : (logroCuota ? '<span class="badge-ok" style="background:#dcfce7; color:#15803d; border-color:#bbf7d0">META ALCANZADA</span>' : '<span class="badge-ok">EN PROCESO</span>')}
+                    </td>
+                </tr>
+            `;
+        }).join('');
+
+        // Pintar los resultados en los cuadros de arriba
+        document.getElementById('kpiTotal').innerText = totalPlantilla;
+        document.getElementById('kpiCriticos').innerText = ventasCriticas;
+        document.getElementById('kpiMeta').innerText = ventasOptimas;
+
+        // --- ACTUALIZAR GRÁFICO ---
         const ctx = document.getElementById('mainChart').getContext('2d');
         if (myChart) myChart.destroy();
         myChart = new Chart(ctx, {
@@ -208,17 +267,34 @@
                 datasets: [{
                     label: 'Ventas Realizadas',
                     data: filteredData.map(d => d.ventas),
-                    backgroundColor: filteredData.map(d => d.ventas < 4 ? '#ef4444' : '#50E094'),
+                    backgroundColor: filteredData.map(d => d.ventas >= 8 ? '#15803d' : (d.ventas < 4 ? '#ef4444' : '#94a3b8')),
                     borderRadius: 6
                 }]
             },
             options: { 
                 responsive: true, 
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return ` Ventas: ${context.parsed.y}`;
+                            }
+                        }
+                    }
+                },
                 scales: { 
-                    y: { beginAtZero: true, grid: { color: '#f1f5f9' } },
-                    x: { ticks: { font: { size: 10 } }, grid: { display: false } }
+                    y: { 
+                        beginAtZero: true, 
+                        suggestedMax: 10,
+                        ticks: { font: { size: 12, weight: 'bold' } },
+                        grid: { color: '#e2e8f0' }
+                    },
+                    x: {
+                        ticks: { font: { size: 11 } },
+                        grid: { display: false }
+                    }
                 }
             }
         });
