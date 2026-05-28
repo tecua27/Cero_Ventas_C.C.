@@ -2,303 +2,242 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>ExpertCell - Dashboard C.C.</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Ventas - Call Center</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        :root { 
-            --sidebar-width: 280px; 
-            --primary-dark: #0f172a; 
-            --verde-pasto: #7CB342; 
-            --accent-green: #50E094; 
-            --danger-bold: #ef4444; 
+        :root {
+            --bg-main: #d2d2da7d;
+            --card-bg: #ffffffc2;
+            --text-primary: #2c3e50;
+            --accent-color: #00b35c;
+            --border-color: #becada;
+            --danger-color: #e53e3e;
+            --success-color: #38a169;
         }
 
-        body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; }
-        
-        #login-screen {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--primary-dark); z-index: 9999;
-            display: flex; align-items: center; justify-content: center; color: white;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
         }
 
-        .sidebar { width: var(--sidebar-width); height: 100vh; position: fixed; background: var(--primary-dark); color: white; padding: 2rem 1.2rem; z-index: 100; }
-        .main-content { margin-left: var(--sidebar-width); padding: 2.5rem; }
-        
-        .kpi-card { border: none; border-radius: 12px; padding: 1.2rem; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .glass-card { background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        
-        .badge-alert { background: #fee2e2; color: #b91c1c; padding: 4px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: bold; border: 1px solid #f87171; }
-        .badge-ok { background: #f0fdf4; color: #166534; padding: 4px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: bold; border: 1px solid #bbf7d0; }
-        
-        .scrollable { max-height: 500px; overflow-y: auto; }
-        
-        .btn-primary { background-color: var(--accent-green); border-color: var(--accent-green); color: #0f172a; font-weight: bold; }
-        .table thead { background-color: #f8fafc; position: sticky; top: 0; z-index: 10; }
+        /* Pantalla de Acceso Rápido */
+        .login-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #1a202c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
 
-        /* Nuevos estilos para mayor legibilidad */
-        .table-datatable th { font-size: 0.85rem; text-transform: uppercase; color: #64748b; padding-bottom: 1rem; }
-        
-        /* Tamaños base para la tabla */
-        .td-nombre { font-size: 1.2rem; line-height: 1.2; }
-        .td-info { font-size: 1rem; color: #475569; }
-        .td-ventas { font-size: 2rem !important; font-weight: 800; }
-        
-        /* Ajuste de badges para que no se vean pequeños */
-        .td-info .badge { font-size: 0.75rem; padding: 5px 10px; }
-        .badge-alert, .badge-ok { font-size: 0.85rem; padding: 6px 12px; }
+        .login-box {
+            background: rgb(226, 231, 228);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+        }
 
-        /* Aumentar el padding de las filas para dar aire */
-        .table-hover tbody tr td { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .login-box h2 { margin-top: 0; color: var(--text-primary); margin-bottom: 20px; font-size: 22px; }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label { display: block; font-size: 13px; margin-bottom: 8px; color: #4a5568; font-weight: 600; }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn-login:hover { background-color: #004494; }
+        .error-msg { color: var(--danger-color); font-size: 13px; margin-top: 12px; display: none; }
+
+        /* Contenedor del Dashboard (Oculto al inicio) */
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            display: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        h1 { margin: 0; font-size: 24px; }
+        .user-badge { background: #e2e8f0; padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+
+        /* Filtros */
+        .filters { display: flex; gap: 15px; margin-bottom: 20px; }
+        select {
+            padding: 10px 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background-color: white;
+            font-size: 14px;
+            cursor: pointer;
+            min-width: 200px;
+        }
+
+        /* KPIs */
+        .kpi-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .kpi-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .kpi-card h3 { margin: 0 0 10px 0; font-size: 14px; color: #718096; text-transform: uppercase; }
+        .kpi-card .value { font-size: 28px; font-weight: bold; color: var(--accent-color); }
+
+        /* Busca esta regla en tus estilos y reemplázala: */
+            .grid-layout { 
+            display: grid; 
+            grid-template-columns: 40% 60%; /* En lugar de 1fr 1fr */
+            gap: 25px; 
+            margin-bottom: 25px; 
+        }
+
+        .chart-card, .table-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .chart-container { position: relative; height: 400px; width: 100%; }
+
+        /* Tablas */
+        .table-section-title { font-size: 14px; font-weight: bold; padding: 8px 12px; margin-top: 15px; border-radius: 4px; }
+        .bg-alert { background-color: #fff5f5; color: var(--danger-color); border-left: 4px solid var(--danger-color); }
+        .bg-top { background-color: #f0fff4; color: var(--success-color); border-left: 4px solid var(--success-color); }
+        table { width: 100%; border-collapse: collapse; margin-top: 5px; font-size: 13px; margin-bottom: 15px; }
+        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border-color); }
+        th { background-color: #f8fafc; color: #4a5568; font-weight: 600; }
+        .badge-danger { color: var(--danger-color); font-weight: bold; }
+        .badge-success { color: var(--success-color); font-weight: bold; }
     </style>
 </head>
 <body>
 
-<div id="login-screen">
-    <div class="text-center" style="max-width: 350px; width: 90%;">
-        <h2 class="fw-bold mb-4" style="color: var(--accent-green);">EXPERTCELL</h2>
-        <p>Ingresa tu contraseña</p>
-        <input type="password" id="passInput" class="form-control form-control-lg bg-dark text-white border-secondary mb-3" placeholder="Contraseña">
-        <button class="btn btn-primary btn-lg w-100" onclick="validateAccess()">Entrar al Sistema</button>
-        <div id="loginError" class="text-danger mt-3 small" style="display:none">Contraseña incorrecta.</div>
+<div id="login-screen" class="login-overlay">
+    <div class="login-box">
+            <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 20px;">
+                <img src="expertcell_logo.png" alt="Logo 1" style="height: 45px; width: auto;">
+            </div>
+        <label>Ingresa tu contraseña</label><br><br>
+        <div class="form-group">
+            
+            <input type="text" id="username" autocomplete="off">
+        </div>
+        <button class="btn-login" onclick="handleLogin()">Entrar al Sistema</button>
+        <div id="login-error" class="error-msg">El usuario no se encuentra registrado en el mapa de accesos.</div>
     </div>
 </div>
 
-<div id="dashboard-view" style="display:none">
-    <div class="sidebar">
-        <div class="text-center mb-5">
-            <h5 class="fw-bold text-white">EXPERTCELL</h5>
-            <div class="badge bg-success small mb-2">Administración de Ventas</div>
-        </div>
-        
-        <label>TIENDA</label><br>
-        <select id="selTienda" class="form-select bg-dark text-white border-0 mb-3 shadow-none" onchange="actualizarJefes()"></select>
+<div id="dashboard-screen" class="dashboard-container">
 
-        <label">SUPERVISOR</label>
-        <select id="selJefe" class="form-select bg-dark text-white border-0 mb-4 shadow-none" onchange="renderizar()"></select>
-
-        <div class="mt-4 p-3" style="background: rgba(255,255,255,0.05); border-radius: 10px; border-left: 4px solid var(--accent-green);">
-            <div class="fw-bold" style="color: var(--accent-green);">Avance al: 16 / 04 / 2026</div>
+    <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px;">
+    
+        <div>
+            <h1 style="margin: 0; font-size: 24px;">Rendimiento Contact Center</h1>
+            Avance al: 24 / 05 / 2026
         </div>
+
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div id="current-user-badge" class="user-badge">Usuario: -</div>
+    </header>
+
+    
+
+    <div class="filters">
+        <div>
+            <label style="display:block; font-size:12px; margin-bottom:5px; color:#718096;"> Tienda :</label>
+            <select id="filter-tienda" onchange="updateDashboard()">
+                <option value="ALL">Todas las Tiendas</option>
+            </select>
+        </div>
+        <div>
+            <label style="display:block; font-size:12px; margin-bottom:5px; color:#718096;"> Supervisor:</label>
+            <select id="filter-jefe" onchange="updateDashboard()">
+                <option value="ALL">Todos los Supervisores</option>
+            </select>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: -15px; margin-bottom: 10px; padding-right: -100px;">
+            <img src="Expertin.png" alt="Logo Empresa" style="height: 100px; width: auto; object-fit: contain;">
+        </div>
+
+
+
+
     </div>
 
-    <div class="main-content">
-        <div class="row g-3 mb-4">
-            <div class="col-md-4"><div class="kpi-card border-start border-primary border-4"><div class="text-muted small">PLANTILLA TOTAL</div><div class="h3 fw-bold" id="kpiTotal">0</div></div></div>
-            <div class="col-md-4"><div class="kpi-card border-start border-danger border-4"><div class="text-danger small">VENTAS CRÍTICAS (< 6)</div><div class="h3 fw-bold text-danger" id="kpiCriticos">0</div></div></div>
-            <div class="col-md-4"><div class="kpi-card border-start border-success border-4"><div class="text-success small">VENTAS ÓPTIMAS (8+)</div><div class="h3 fw-bold text-success" id="kpiMeta">0</div></div></div>
+    <div class="kpi-container">
+        <div class="kpi-card"><h3>Total Ventas</h3><div id="kpi-total" class="value">0</div></div>
+        <div class="kpi-card"><h3>Ejecutivos con Menos de 6 Ventas</h3><div id="kpi-alertas" class="value" style="color: var(--danger-color);">0</div></div>
+        <div class="kpi-card"><h3>Ejecutivos con Mas de 7 ventas</h3><div id="kpi-tops" class="value" style="color: var(--success-color);">0</div></div>
+    </div>
+
+    <div class="grid-layout">
+        <div class="chart-card">
+            <h3>Ventas Acumuladas</h3>
+            <div class="chart-container"><canvas id="salesChart"></canvas></div>
         </div>
 
-        <div class="glass-card">
-            <h6 class="fw-bold mb-4">Detalle de Productividad por Ejecutivo</h6>
-            <div class="scrollable">
-                <table class="table table-hover align-middle">
-                    <thead>
-                        <tr>
-                            <th>EJECUTIVO</th>
-                            <th>JEFE INMEDIATO</th>
-                            <th id="thTienda">TIENDA</th>
-                            <th>INGRESO</th>
-                            <th class="text-center">VENTAS</th>
-                            <th class="text-center">ESTADO</th>
-                        </tr>
-                    </thead>
-                    <tbody id="listaGeneral"></tbody>
+        <div class="table-card">
+            <h3>Segmentación de Ejecutivos</h3>
+            <div style="max-height: 430px; overflow-y: auto; padding-right: 5px;">
+                <div class="table-section-title bg-alert">⚠️ MENOS DE 6 VENTAS</div>
+                <table>
+                    <thead><tr><th>Ejecutivo</th><th>Ingreso</th><th>Jefe</th><th>Ventas</th></tr></thead>
+                    <tbody id="tbody-low-sales"></tbody>
+                </table>
+                <div class="table-section-title bg-top">⭐ MÁS DE 7 VENTAS</div>
+                <table>
+                    <thead><tr><th>Ejecutivo</th><th>Ingreso</th><th>Jefe</th><th>Ventas</th></tr></thead>
+                    <tbody id="tbody-high-sales"></tbody>
                 </table>
             </div>
         </div>
-
-        <div class="glass-card">
-            <canvas id="mainChart" height="350"></canvas>
-        </div>
     </div>
 </div>
 
-<script>
-    const ACCESS_MAP = {
-        "j.tenorio":["TODAS"],
-        "blanca":["TODAS"],
-        "julio1":["TODAS"],
-        "guillo.ca": ["TODAS"],
-        "yara": ["TODAS"],
-        "gerente.t1": ["TIENDA A"],
-        "gerente.t2": ["TIENDA B"],
-        "admin.especial": ["TIENDA A", "TIENDA B"]
-    };
-
-    let rawData = [];
-    let myChart = null;
-    let tiendasPermitidas = [];
-
-    async function validateAccess() {
-        const pass = document.getElementById('passInput').value;
-        if (ACCESS_MAP[pass]) {
-            tiendasPermitidas = ACCESS_MAP[pass];
-            document.getElementById('login-screen').style.display = 'none';
-            document.getElementById('dashboard-view').style.display = 'block';
-            fetchData();
-        } else {
-            document.getElementById('loginError').style.display = 'block';
-        }
-    }
-
-    async function fetchData() {
-        try {
-            const response = await fetch('datos.json');
-            const allData = await response.json();
-            
-            if (tiendasPermitidas.includes("TODAS")) {
-                rawData = allData;
-            } else {
-                rawData = allData.filter(d => tiendasPermitidas.includes(d.tienda));
-            }
-            
-            const listaTiendasDisponibles = [...new Set(rawData.map(d => d.tienda))];
-            let selectorHTML = (tiendasPermitidas.includes("TODAS") || listaTiendasDisponibles.length > 1) ? '<option value="TODAS">TODAS</option>' : '';
-            selectorHTML += listaTiendasDisponibles.map(t => `<option value="${t}">${t}</option>`).join('');
-            document.getElementById('selTienda').innerHTML = selectorHTML;
-            
-            actualizarJefes();
-        } catch (error) { 
-            console.error("Error al cargar datos.json", error); 
-        }
-    }
-
-    function actualizarJefes() {
-        const tiendaSeleccionada = document.getElementById('selTienda').value;
-        const dataFiltradaPorTienda = (tiendaSeleccionada === 'TODAS') ? rawData : rawData.filter(d => d.tienda === tiendaSeleccionada);
-        
-        const jefes = ['TODOS', ...new Set(dataFiltradaPorTienda.map(d => d.jefe).filter(j => j))];
-        document.getElementById('selJefe').innerHTML = jefes.map(j => `<option value="${j}">${j}</option>`).join('');
-        
-        renderizar();
-    }
-
-    function renderizar() {
-        const t = document.getElementById('selTienda').value;
-        const j = document.getElementById('selJefe').value;
-        
-        // Fecha de corte solicitada (1 de Abril 2026)
-        const FECHA_CORTE = new Date(2026, 3, 1); 
-
-        const filteredData = rawData.filter(d => 
-            (t === 'TODAS' || d.tienda === t) && 
-            (j === 'TODOS' || d.jefe === j)
-        );
-
-        // Variables para los contadores superiores
-        let totalPlantilla = filteredData.length;
-        let ventasCriticas = 0;
-        let ventasOptimas = 0; // Este contará a los de 8+
-
-        filteredData.sort((a, b) => b.ventas - a.ventas);
-
-        // --- CONTROL DE VISIBILIDAD DE COLUMNAS (ENCABEZADOS) ---
-        const thTienda = document.getElementById('thTienda');
-        const thJefe = document.querySelector('th:nth-child(2)'); // JEFE INMEDIATO
-
-        thTienda.style.display = (t !== 'TODAS') ? 'none' : '';
-        if (thJefe) thJefe.style.display = (j !== 'TODOS') ? 'none' : '';
-
-        // Generar filas de la tabla con diseño expandido
-        document.getElementById('listaGeneral').innerHTML = filteredData.map(d => {
-            // Procesar fecha DD/MM/YYYY del JSON
-            const partes = d.ingreso.split('/');
-            const fechaIngreso = new Date(partes[2], partes[1] - 1, partes[0]);
-            
-            const diffTiempo = FECHA_CORTE - fechaIngreso;
-            const diasAntiguedad = Math.floor(diffTiempo / (1000 * 60 * 60 * 24));
-            
-            const esAntiguo = diasAntiguedad > 42;
-            const logroCuota = d.ventas >= 8;
-
-            // Lógica de conteo para KPIs superiores
-            if (d.ventas < 4) {
-                ventasCriticas++;
-            } else if (d.ventas >= 8) {
-                ventasOptimas++;
-            }
-
-            return `
-                <tr>
-                    <td class="td-nombre">
-                        <div class="fw-bold text-dark">${d.nombre}</div>
-                        <div class="text-muted" style="font-size: 0.9rem;">${diasAntiguedad} días de antigüedad</div>
-                    </td>
-                    
-                    <td class="td-info" style="${j !== 'TODOS' ? 'display:none' : ''}">
-                        <span class="text-secondary">${d.jefe || 'N/A'}</span>
-                    </td>
-                    
-                    <td class="td-info" style="${t !== 'TODAS' ? 'display:none' : ''}">
-                        <span class="badge bg-light text-dark border">${d.tienda}</span>
-                    </td>
-                    
-                    <td class="td-info">
-                        <div class="fw-bold">${d.ingreso}</div>
-                        ${esAntiguo ? '<span class="badge bg-info text-dark mt-1">+42 DÍAS</span>' : '<span class="badge bg-light text-muted mt-1">RECIENTE</span>'}
-                    </td>
-                    
-                    <td class="text-center">
-                        <div class="td-ventas ${d.ventas < 4 ? 'text-danger' : (logroCuota ? 'text-success' : 'text-primary')}">
-                            ${d.ventas}
-                        </div>
-                    </td>
-                    
-                    <td class="text-center">
-                        ${d.ventas < 4 ? '<span class="badge-alert">BAJO LOGRO</span>' : (logroCuota ? '<span class="badge-ok" style="background:#dcfce7; color:#15803d; border-color:#bbf7d0">META ALCANZADA</span>' : '<span class="badge-ok">EN PROCESO</span>')}
-                    </td>
-                </tr>
-            `;
-        }).join('');
-
-        // Pintar los resultados en los cuadros de arriba
-        document.getElementById('kpiTotal').innerText = totalPlantilla;
-        document.getElementById('kpiCriticos').innerText = ventasCriticas;
-        document.getElementById('kpiMeta').innerText = ventasOptimas;
-
-        // --- ACTUALIZAR GRÁFICO ---
-        const ctx = document.getElementById('mainChart').getContext('2d');
-        if (myChart) myChart.destroy();
-        myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: filteredData.map(d => d.nombre),
-                datasets: [{
-                    label: 'Ventas Realizadas',
-                    data: filteredData.map(d => d.ventas),
-                    backgroundColor: filteredData.map(d => d.ventas >= 8 ? '#15803d' : (d.ventas < 4 ? '#ef4444' : '#94a3b8')),
-                    borderRadius: 6
-                }]
-            },
-            options: { 
-                responsive: true, 
-                maintainAspectRatio: false,
-                plugins: { 
-                    legend: { display: false },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return ` Ventas: ${context.parsed.y}`;
-                            }
-                        }
-                    }
-                },
-                scales: { 
-                    y: { 
-                        beginAtZero: true, 
-                        suggestedMax: 10,
-                        ticks: { font: { size: 12, weight: 'bold' } },
-                        grid: { color: '#e2e8f0' }
-                    },
-                    x: {
-                        ticks: { font: { size: 11 } },
-                        grid: { display: false }
-                    }
-                }
-            }
-        });
-    }
-</script>
+<script src="app.js"></script>
 </body>
 </html>
