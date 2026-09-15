@@ -1,9 +1,9 @@
 [
   {
-    "nombre": "ABRAHAM LOPEZ TELLEZ",
+    "nombre": "EDGAR JOSE LUIS VIVEROS CABRERA",
     "jefe": "Sin Jefe",
     "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "6/9/2026",
+    "ingreso": "13/9/2026",
     "ventas": 0
   },
   {
@@ -42,6 +42,27 @@
     "ventas": 0
   },
   {
+    "nombre": "MARCO ANTONIO COLIN SERRANO",
+    "jefe": "Sin Jefe",
+    "tienda": "EXP ATT C CENTER 2",
+    "ingreso": "13/9/2026",
+    "ventas": 0
+  },
+  {
+    "nombre": "ALI LARIOS PEREZ",
+    "jefe": "Sin Jefe",
+    "tienda": "EXP ATT C CENTER 2",
+    "ingreso": "13/9/2026",
+    "ventas": 0
+  },
+  {
+    "nombre": "EMMANUEL HERNANDEZ SALDAÑA",
+    "jefe": "Sin Jefe",
+    "tienda": "EXP ATT C CENTER 2",
+    "ingreso": "13/9/2026",
+    "ventas": 0
+  },
+  {
     "nombre": "GABRIEL HUERTA LUCERO",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
@@ -53,28 +74,28 @@
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "6/7/2025",
-    "ventas": 2
+    "ventas": 6
   },
   {
     "nombre": "JAIR DALI MALDONADO AGUIRRE",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "25/1/2026",
-    "ventas": 4
+    "ventas": 7
   },
   {
     "nombre": "MARIA FERNANDA OROPEZA DE LUNA",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "11/1/2026",
-    "ventas": 0
+    "ventas": 1
   },
   {
     "nombre": "MIGUEL ANGEL QUITL MENDOZA",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "5/10/2025",
-    "ventas": 4
+    "ventas": 5
   },
   {
     "nombre": "RICARDO FUENTES TERAN",
@@ -88,14 +109,14 @@
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "22/3/2026",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "CHRISTIAN SERGIO MIRANDA AGUILAR",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "28/6/2026",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "GABRIELA ELIZABETH ALMAZAN MUÑOZ",
@@ -116,14 +137,14 @@
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "2/8/2026",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "ANA PAULA VELAZQUEZ PALACIOS",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "18/1/2026",
-    "ventas": 4
+    "ventas": 7
   },
   {
     "nombre": "ERIKA DEL SOCORRO FLORES FRANCO",
@@ -144,21 +165,21 @@
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "3/8/2025",
-    "ventas": 3
+    "ventas": 5
   },
   {
     "nombre": "IRVING RIVERA CASTILLO",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "30/11/2025",
-    "ventas": 3
+    "ventas": 5
   },
   {
     "nombre": "JAVIER FERNANDO HERNANDEZ PEREZ",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "8/2/2026",
-    "ventas": 6
+    "ventas": 7
   },
   {
     "nombre": "KEVIN ALEJANDRO PEREZ COBOS",
@@ -172,14 +193,14 @@
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "3/8/2025",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "XIMENA JUAREZ VILLARAUZ",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "10/8/2025",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "FRIDA RODRIGUEZ GARCIA",
@@ -193,7 +214,7 @@
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "5/7/2026",
-    "ventas": 1
+    "ventas": 4
   },
   {
     "nombre": "NAYELLY MOLINA GUZMAN",
@@ -207,105 +228,105 @@
     "jefe": "ANA PAOLA DE LA FUENTE GUARNEROS",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "7/12/2025",
-    "ventas": 4
+    "ventas": 7
   },
   {
     "nombre": "CRISTIAN AMOROS CANO",
     "jefe": "ANA PAOLA DE LA FUENTE GUARNEROS",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "22/6/2025",
-    "ventas": 1
+    "ventas": 2
   },
   {
     "nombre": "ISAAC PAREDES CORDERO",
     "jefe": "ANA PAOLA DE LA FUENTE GUARNEROS",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "20/7/2025",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "KEVIN ALEJANDRO ROJAS BALBUENA",
     "jefe": "ANA PAOLA DE LA FUENTE GUARNEROS",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "18/1/2026",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "ERIKA JIMENEZ GARCIA",
     "jefe": "ANA PAOLA DE LA FUENTE GUARNEROS",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "3/5/2026",
-    "ventas": 2
+    "ventas": 4
   },
   {
     "nombre": "SILVIA ESTHER CANTO TORRES",
     "jefe": "ANA PAOLA DE LA FUENTE GUARNEROS",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "10/5/2026",
-    "ventas": 1
+    "ventas": 2
   },
   {
     "nombre": "QUEILA EDREI CASTILLO RODRIGUEZ",
     "jefe": "ANA PAOLA DE LA FUENTE GUARNEROS",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "31/5/2026",
-    "ventas": 2
+    "ventas": 4
   },
   {
     "nombre": "BRENDA ROMERO MORA",
     "jefe": "ANA PAOLA DE LA FUENTE GUARNEROS",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "5/7/2026",
-    "ventas": 3
+    "ventas": 6
   },
   {
     "nombre": "ADIN EDUARDO SALDIVAR BARRON",
     "jefe": "ANA PAOLA DE LA FUENTE GUARNEROS",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "2/8/2026",
-    "ventas": 2
+    "ventas": 6
   },
   {
     "nombre": "ANTONIO MARTINEZ CORDERO",
     "jefe": "MELINA PICHON SEGUNDO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "12/7/2026",
-    "ventas": 1
+    "ventas": 2
   },
   {
     "nombre": "BELEN ANAID BAUTISTA VARELA",
     "jefe": "MELINA PICHON SEGUNDO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "2/11/2025",
-    "ventas": 3
+    "ventas": 5
   },
   {
     "nombre": "JOSUE BRAVO NIEVES",
     "jefe": "MELINA PICHON SEGUNDO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "19/10/2025",
-    "ventas": 1
+    "ventas": 2
   },
   {
     "nombre": "GUADALUPE AYAZUANE GONZALEZ PEREZ",
     "jefe": "MELINA PICHON SEGUNDO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "12/7/2026",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "ALEXANDER REYES LEMUS",
     "jefe": "MELINA PICHON SEGUNDO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "12/7/2026",
-    "ventas": 1
+    "ventas": 4
   },
   {
     "nombre": "CLEMENTE ARELLANO RAMOS",
     "jefe": "MELINA PICHON SEGUNDO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "12/7/2026",
-    "ventas": 3
+    "ventas": 5
   },
   {
     "nombre": "DAVID GASPAR ROMERO",
@@ -319,42 +340,42 @@
     "jefe": "MELINA PICHON SEGUNDO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "19/7/2026",
-    "ventas": 3
+    "ventas": 4
   },
   {
     "nombre": "JOSE IVAN GARCES CORTES",
     "jefe": "MELINA PICHON SEGUNDO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "26/7/2026",
-    "ventas": 1
+    "ventas": 2
   },
   {
     "nombre": "MIGUEL ANGEL GONZALEZ CORTAZAR",
     "jefe": "MELINA PICHON SEGUNDO",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "2/8/2026",
-    "ventas": 1
+    "ventas": 4
   },
   {
     "nombre": "CESAR JAHACIEL ALONSO GARCIA",
     "jefe": "BLADIMIR LEON RODRIGUEZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "1/7/2025",
-    "ventas": 5
+    "ventas": 8
   },
   {
     "nombre": "DIEGO IVAN RODRIGUEZ ALVAREZ",
     "jefe": "BLADIMIR LEON RODRIGUEZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "20/7/2025",
-    "ventas": 1
+    "ventas": 4
   },
   {
     "nombre": "FERNANDO REYNA SANCHEZ",
     "jefe": "BLADIMIR LEON RODRIGUEZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "3/8/2025",
-    "ventas": 1
+    "ventas": 4
   },
   {
     "nombre": "JESUS OZAIR RUIZ ORTIGOZA",
@@ -389,14 +410,14 @@
     "jefe": "VICTOR DANIEL RODRIGUEZ RAMIREZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "6/7/2025",
-    "ventas": 4
+    "ventas": 6
   },
   {
     "nombre": "JOSE ADRIAN SANCHEZ ESTEVEZ",
     "jefe": "VICTOR DANIEL RODRIGUEZ RAMIREZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "11/1/2026",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "PAOLA DANAE TEYSSIER HERNANDEZ",
@@ -410,14 +431,14 @@
     "jefe": "VICTOR DANIEL RODRIGUEZ RAMIREZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "18/1/2026",
-    "ventas": 3
+    "ventas": 5
   },
   {
     "nombre": "MONTSERRAT ROJAS ANZURES",
     "jefe": "VICTOR DANIEL RODRIGUEZ RAMIREZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "14/6/2026",
-    "ventas": 3
+    "ventas": 5
   },
   {
     "nombre": "RAFAEL COATL OCELOTL",
@@ -438,28 +459,28 @@
     "jefe": "VICTOR DANIEL RODRIGUEZ RAMIREZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "28/6/2026",
-    "ventas": 4
+    "ventas": 5
   },
   {
     "nombre": "LUIS ENRIQUE AGUILAR GARCIA",
     "jefe": "VICTOR DANIEL RODRIGUEZ RAMIREZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "5/7/2026",
-    "ventas": 6
+    "ventas": 8
   },
   {
     "nombre": "MIGUEL ANGEL HERNANDEZ CLEMENTE",
     "jefe": "VICTOR DANIEL RODRIGUEZ RAMIREZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "19/7/2026",
-    "ventas": 4
+    "ventas": 5
   },
   {
     "nombre": "MARCOS CARLOS RAMIREZ",
     "jefe": "VIANEY MELCHUN HERNANDEZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "5/10/2025",
-    "ventas": 0
+    "ventas": 1
   },
   {
     "nombre": "MARISOL DE JESUS CHANTES TELLEZ",
@@ -487,28 +508,28 @@
     "jefe": "OBED COSME SANCHEZ PADILLA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "28/9/2025",
-    "ventas": 4
+    "ventas": 7
   },
   {
     "nombre": "DIANA LAURA FLORES ARROYO",
     "jefe": "OBED COSME SANCHEZ PADILLA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "7/9/2025",
-    "ventas": 3
+    "ventas": 7
   },
   {
     "nombre": "FELIPE EMMANUEL SANTOS LOPEZ",
     "jefe": "OBED COSME SANCHEZ PADILLA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "26/10/2025",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "FORTINO ROMERO PEREZ",
     "jefe": "OBED COSME SANCHEZ PADILLA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "17/11/2025",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "KATHIA ESTEFANIA PEREZ MERCADO",
@@ -522,42 +543,42 @@
     "jefe": "OBED COSME SANCHEZ PADILLA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "18/1/2026",
-    "ventas": 4
+    "ventas": 6
   },
   {
     "nombre": "ZULLY AIDE CRUZ RAMIREZ",
     "jefe": "OBED COSME SANCHEZ PADILLA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "3/8/2025",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "VICTOR IMANOL TRINIDAD ORDAZ",
     "jefe": "OBED COSME SANCHEZ PADILLA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "31/5/2026",
-    "ventas": 2
+    "ventas": 4
   },
   {
     "nombre": "DIEGO DANIEL ALCANTARA FLORES",
     "jefe": "OBED COSME SANCHEZ PADILLA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "14/6/2026",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "MARTHA LIZET PEREZ TEHOZOL",
     "jefe": "OBED COSME SANCHEZ PADILLA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "21/6/2026",
-    "ventas": 0
+    "ventas": 3
   },
   {
     "nombre": "DANIELA DENISSE PEREZ SANCHEZ",
     "jefe": "OBED COSME SANCHEZ PADILLA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "28/6/2026",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "GABRIEL COYOTL COYOTL",
@@ -565,20 +586,6 @@
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "5/7/2026",
     "ventas": 1
-  },
-  {
-    "nombre": "MIGUEL ANTONIO AQUINO CRUZ",
-    "jefe": "Sin Jefe",
-    "tienda": "EXP ATT C CENTER JUAREZ 701",
-    "ingreso": "6/9/2026",
-    "ventas": 0
-  },
-  {
-    "nombre": "JAFET AGUIRRE GALICIA",
-    "jefe": "Sin Jefe",
-    "tienda": "EXP ATT C CENTER JUAREZ 701",
-    "ingreso": "6/9/2026",
-    "ventas": 0
   },
   {
     "nombre": "NANCY ISABEL GARCIA MALDONADO",
@@ -592,91 +599,91 @@
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "27/7/2025",
-    "ventas": 5
+    "ventas": 9
   },
   {
     "nombre": "IRVIN ALEXIS FERNANDEZ MILA",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/8/2024",
-    "ventas": 3
+    "ventas": 7
   },
   {
     "nombre": "JENNY PEREZ TOME",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "6/8/2024",
-    "ventas": 3
+    "ventas": 4
   },
   {
     "nombre": "JOSHUA LOPEZ MUNGUIA",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "25/1/2026",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "KAREN YARELHI VELAZQUEZ RAMIREZ",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "30/11/2025",
-    "ventas": 5
+    "ventas": 7
   },
   {
     "nombre": "KARLA KARINA JIMENEZ SERRANO",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "17/8/2025",
-    "ventas": 4
+    "ventas": 8
   },
   {
     "nombre": "SAMARA DEZERET GONZALEZ GOMEZ",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "22/6/2025",
-    "ventas": 7
+    "ventas": 8
   },
   {
     "nombre": "OLGA EMILIA CONDE GONZALEZ",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "8/3/2026",
-    "ventas": 3
+    "ventas": 6
   },
   {
     "nombre": "NALLELY AVILA NAVARRETE",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "10/5/2026",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "EILEEN NAYELI CEBADA CORDOBA",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "24/5/2026",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "FAVIAN HERRERA PALACIOS",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "24/5/2026",
-    "ventas": 2
+    "ventas": 5
   },
   {
     "nombre": "MARIO BENJAMIN HERRERA HERNANDEZ",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/6/2026",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "AURA MICHELLE MANZANO DE LA CRUZ",
     "jefe": "JORGE MIGUEL UREÑA ZARATE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/6/2026",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "ALBERTO LADRON DE GUEVARA VELA",
@@ -697,21 +704,14 @@
     "jefe": "ANGELES ROCIO LUIS BUSTAMANTE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "26/11/2024",
-    "ventas": 5
-  },
-  {
-    "nombre": "MARIA FERNANDA HURTADO RODRIGUEZ",
-    "jefe": "ANGELES ROCIO LUIS BUSTAMANTE",
-    "tienda": "EXP ATT C CENTER JUAREZ 701",
-    "ingreso": "10/8/2025",
-    "ventas": 3
+    "ventas": 6
   },
   {
     "nombre": "MARIA FERNANDA VARGAS REYES",
     "jefe": "ANGELES ROCIO LUIS BUSTAMANTE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "12/1/2025",
-    "ventas": 3
+    "ventas": 4
   },
   {
     "nombre": "NORWIN LOT ROJAS GARCIA",
@@ -739,21 +739,21 @@
     "jefe": "ANGELES ROCIO LUIS BUSTAMANTE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "26/4/2026",
-    "ventas": 4
+    "ventas": 5
   },
   {
     "nombre": "REBECA VIVIANA RAMIREZ GARCIA",
     "jefe": "ANGELES ROCIO LUIS BUSTAMANTE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/6/2026",
-    "ventas": 7
+    "ventas": 12
   },
   {
     "nombre": "JOSE JULIAN MORALES RODRIGUEZ",
     "jefe": "ANGELES ROCIO LUIS BUSTAMANTE",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/6/2026",
-    "ventas": 1
+    "ventas": 4
   },
   {
     "nombre": "PAUL IRVING HERNANDEZ ZACATELCO",
@@ -763,11 +763,18 @@
     "ventas": 4
   },
   {
+    "nombre": "MIGUEL ANTONIO AQUINO CRUZ",
+    "jefe": "ANGELES ROCIO LUIS BUSTAMANTE",
+    "tienda": "EXP ATT C CENTER JUAREZ 701",
+    "ingreso": "6/9/2026",
+    "ventas": 0
+  },
+  {
     "nombre": "ALEX ROBERTO ARENAS ESTRADA",
     "jefe": "MIGUEL ANGEL OLGUIN GONZALEZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "16/3/2026",
-    "ventas": 2
+    "ventas": 3
   },
   {
     "nombre": "CRISTEL TAPIA RODRIGUEZ",
@@ -781,20 +788,13 @@
     "jefe": "MIGUEL ANGEL OLGUIN GONZALEZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "5/5/2025",
-    "ventas": 5
+    "ventas": 6
   },
   {
     "nombre": "YONATAN ARMAS ROLDAN",
     "jefe": "MIGUEL ANGEL OLGUIN GONZALEZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "9/11/2025",
-    "ventas": 0
-  },
-  {
-    "nombre": "JOSE DIEGO JARAMILLO HERNANDEZ",
-    "jefe": "MIGUEL ANGEL OLGUIN GONZALEZ",
-    "tienda": "EXP ATT C CENTER JUAREZ 701",
-    "ingreso": "19/4/2026",
     "ventas": 1
   },
   {
@@ -802,28 +802,28 @@
     "jefe": "MIGUEL ANGEL OLGUIN GONZALEZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "26/4/2026",
-    "ventas": 1
+    "ventas": 5
   },
   {
     "nombre": "JUAN MANUEL SUMANO PAREDES",
     "jefe": "MIGUEL ANGEL OLGUIN GONZALEZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "26/4/2026",
-    "ventas": 1
+    "ventas": 2
   },
   {
     "nombre": "GIOVANNI ELISUA SANTIAGO RUIZ",
     "jefe": "MIGUEL ANGEL OLGUIN GONZALEZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/6/2026",
-    "ventas": 3
+    "ventas": 5
   },
   {
     "nombre": "CHRISTIAN DANIEL SANTIAGO ARROYO",
     "jefe": "MIGUEL ANGEL OLGUIN GONZALEZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "21/6/2026",
-    "ventas": 2
+    "ventas": 4
   },
   {
     "nombre": "ERIKA PEREZ RAMOS",
@@ -854,39 +854,46 @@
     "ventas": 4
   },
   {
+    "nombre": "JAFET AGUIRRE GALICIA",
+    "jefe": "MIGUEL ANGEL OLGUIN GONZALEZ",
+    "tienda": "EXP ATT C CENTER JUAREZ 701",
+    "ingreso": "6/9/2026",
+    "ventas": 0
+  },
+  {
     "nombre": "GUILLERMO JOSUE GUARNEROS LEZAMA",
     "jefe": "ANGELICA GUADALUPE CORDERO COSTILLA",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "2/11/2025",
-    "ventas": 4
+    "ventas": 5
   },
   {
     "nombre": "JHEOVANNY HERNANDEZ LARA",
     "jefe": "ANGELICA GUADALUPE CORDERO COSTILLA",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "19/7/2026",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "TERESA IVETTE TAPIA GONZALEZ",
     "jefe": "ANGELICA GUADALUPE CORDERO COSTILLA",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "17/8/2025",
-    "ventas": 3
+    "ventas": 8
   },
   {
     "nombre": "JAHIR QUECHOL ROMERO",
     "jefe": "ANGELICA GUADALUPE CORDERO COSTILLA",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "19/7/2026",
-    "ventas": 0
+    "ventas": 2
   },
   {
     "nombre": "CELINA MIRANDA NAVARRETE",
     "jefe": "ANGELICA GUADALUPE CORDERO COSTILLA",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "21/6/2026",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "JESUS CRISTOPHER MOTA LEON",
@@ -907,14 +914,14 @@
     "jefe": "ANGELICA GUADALUPE CORDERO COSTILLA",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "28/6/2026",
-    "ventas": 1
+    "ventas": 2
   },
   {
     "nombre": "BRUNO CASTAÑEDA ROMERO",
     "jefe": "ANGELICA GUADALUPE CORDERO COSTILLA",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "28/6/2026",
-    "ventas": 0
+    "ventas": 1
   },
   {
     "nombre": "ALAN SANCHEZ LOPEZ",
@@ -928,14 +935,14 @@
     "jefe": "ADRIANA PEREZ QUIROZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/8/2024",
-    "ventas": 4
+    "ventas": 5
   },
   {
     "nombre": "JORGE ALBERTO GARCIA BANUET",
     "jefe": "ADRIANA PEREZ QUIROZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "30/11/2025",
-    "ventas": 4
+    "ventas": 6
   },
   {
     "nombre": "KARLA ALEJANDRA FLORES GRANILLO",
@@ -963,7 +970,7 @@
     "jefe": "ADRIANA PEREZ QUIROZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "9/8/2026",
-    "ventas": 1
+    "ventas": 3
   },
   {
     "nombre": "LAURA HERNANDEZ MELGAREJO",
@@ -977,13 +984,13 @@
     "jefe": "ADRIANA PEREZ QUIROZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "23/8/2026",
-    "ventas": 2
+    "ventas": 4
   },
   {
     "nombre": "CAROLINA CERVANTES MORALES",
     "jefe": "ADRIANA PEREZ QUIROZ",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "23/8/2026",
-    "ventas": 2
+    "ventas": 3
   }
 ]
