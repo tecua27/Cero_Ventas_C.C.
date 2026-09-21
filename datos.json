@@ -1,44 +1,9 @@
 [
   {
-    "nombre": "EDGAR JOSE LUIS VIVEROS CABRERA",
-    "jefe": "Sin Jefe",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "13/9/2026",
-    "ventas": 0
-  },
-  {
     "nombre": "ARENA PLATAFORMA SA DE CV",
     "jefe": "Sin Jefe",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "1/7/2026",
-    "ventas": 0
-  },
-  {
-    "nombre": "OMAR TONATIHU DIAZ PATIÑO",
-    "jefe": "Sin Jefe",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "6/9/2026",
-    "ventas": 0
-  },
-  {
-    "nombre": "ALEXIS DIAZ PEDRAZA",
-    "jefe": "Sin Jefe",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "6/9/2026",
-    "ventas": 0
-  },
-  {
-    "nombre": "YAEL ALEXANDER HERNANDEZ SEGURA",
-    "jefe": "Sin Jefe",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "6/9/2026",
-    "ventas": 0
-  },
-  {
-    "nombre": "ELIONEY CARCAMO QUINTOS",
-    "jefe": "Sin Jefe",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "6/9/2026",
     "ventas": 0
   },
   {
@@ -77,13 +42,6 @@
     "ventas": 6
   },
   {
-    "nombre": "JAIR DALI MALDONADO AGUIRRE",
-    "jefe": "ALAN UZIEL SALAZAR AGUILAR",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "25/1/2026",
-    "ventas": 7
-  },
-  {
     "nombre": "MARIA FERNANDA OROPEZA DE LUNA",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
@@ -112,13 +70,6 @@
     "ventas": 3
   },
   {
-    "nombre": "CHRISTIAN SERGIO MIRANDA AGUILAR",
-    "jefe": "ALAN UZIEL SALAZAR AGUILAR",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "28/6/2026",
-    "ventas": 3
-  },
-  {
     "nombre": "GABRIELA ELIZABETH ALMAZAN MUÑOZ",
     "jefe": "ALAN UZIEL SALAZAR AGUILAR",
     "tienda": "EXP ATT C CENTER 2",
@@ -140,18 +91,18 @@
     "ventas": 3
   },
   {
+    "nombre": "ELIONEY CARCAMO QUINTOS",
+    "jefe": "ALAN UZIEL SALAZAR AGUILAR",
+    "tienda": "EXP ATT C CENTER 2",
+    "ingreso": "6/9/2026",
+    "ventas": 0
+  },
+  {
     "nombre": "ANA PAULA VELAZQUEZ PALACIOS",
     "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "18/1/2026",
     "ventas": 7
-  },
-  {
-    "nombre": "ERIKA DEL SOCORRO FLORES FRANCO",
-    "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "7/12/2025",
-    "ventas": 4
   },
   {
     "nombre": "GAMALIEL ALEJANDRO ZAMORA VALENCIA",
@@ -215,13 +166,6 @@
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "5/7/2026",
     "ventas": 4
-  },
-  {
-    "nombre": "NAYELLY MOLINA GUZMAN",
-    "jefe": "REYNA LIZZETTE MARTINEZ GARCIA",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "23/8/2026",
-    "ventas": 1
   },
   {
     "nombre": "ANDRES TELLEZ CRUZ",
@@ -483,13 +427,6 @@
     "ventas": 1
   },
   {
-    "nombre": "MARISOL DE JESUS CHANTES TELLEZ",
-    "jefe": "VIANEY MELCHUN HERNANDEZ",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "30/8/2026",
-    "ventas": 0
-  },
-  {
     "nombre": "NORMA GUERRERO MARTINEZ",
     "jefe": "VIANEY MELCHUN HERNANDEZ",
     "tienda": "EXP ATT C CENTER 2",
@@ -501,6 +438,27 @@
     "jefe": "VIANEY MELCHUN HERNANDEZ",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "30/8/2026",
+    "ventas": 0
+  },
+  {
+    "nombre": "OMAR TONATIHU DIAZ PATIÑO",
+    "jefe": "VIANEY MELCHUN HERNANDEZ",
+    "tienda": "EXP ATT C CENTER 2",
+    "ingreso": "6/9/2026",
+    "ventas": 0
+  },
+  {
+    "nombre": "ALEXIS DIAZ PEDRAZA",
+    "jefe": "VIANEY MELCHUN HERNANDEZ",
+    "tienda": "EXP ATT C CENTER 2",
+    "ingreso": "6/9/2026",
+    "ventas": 0
+  },
+  {
+    "nombre": "YAEL ALEXANDER HERNANDEZ SEGURA",
+    "jefe": "VIANEY MELCHUN HERNANDEZ",
+    "tienda": "EXP ATT C CENTER 2",
+    "ingreso": "6/9/2026",
     "ventas": 0
   },
   {
@@ -529,13 +487,6 @@
     "jefe": "OBED COSME SANCHEZ PADILLA",
     "tienda": "EXP ATT C CENTER 2",
     "ingreso": "17/11/2025",
-    "ventas": 3
-  },
-  {
-    "nombre": "KATHIA ESTEFANIA PEREZ MERCADO",
-    "jefe": "OBED COSME SANCHEZ PADILLA",
-    "tienda": "EXP ATT C CENTER 2",
-    "ingreso": "25/1/2026",
     "ventas": 3
   },
   {
@@ -588,10 +539,17 @@
     "ventas": 1
   },
   {
-    "nombre": "NANCY ISABEL GARCIA MALDONADO",
+    "nombre": "JORGE ANTONIO BELLO",
     "jefe": "Sin Jefe",
     "tienda": "EXP ATT C CENTER JUAREZ 701",
-    "ingreso": "6/9/2026",
+    "ingreso": "20/9/2026",
+    "ventas": 0
+  },
+  {
+    "nombre": "ESTHELA VICTORIA CHAVARRIA GARCIA",
+    "jefe": "Sin Jefe",
+    "tienda": "EXP ATT C CENTER JUAREZ 701",
+    "ingreso": "20/9/2026",
     "ventas": 0
   },
   {
@@ -684,6 +642,13 @@
     "tienda": "EXP ATT C CENTER JUAREZ 701",
     "ingreso": "14/6/2026",
     "ventas": 3
+  },
+  {
+    "nombre": "NANCY ISABEL GARCIA MALDONADO",
+    "jefe": "TOMAS ROSAS ROJAS",
+    "tienda": "EXP ATT C CENTER JUAREZ 701",
+    "ingreso": "6/9/2026",
+    "ventas": 0
   },
   {
     "nombre": "ALBERTO LADRON DE GUEVARA VELA",
