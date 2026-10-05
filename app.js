@@ -4,6 +4,7 @@ const ACCESS_MAP = {
     "blanca":      ["TODAS"],
     "julio1":      ["TODAS"],
     "guillo.ca":   ["TODAS"],
+    "edu.arm":   ["TODAS"],
     "yara":        ["TODAS"],
     "maria.lui": ["exp att c center 2"],
     "supervisor2": ["exp att c center juarez 701"]
